@@ -20,9 +20,11 @@
 4. 다운받은 Resume Template 압축을 풀고 github_page로 복사하고 확인
 
    ```
-   student@M70213 MINGW64 ~/Documents/week2/day3                                     
+   student@M70213 MINGW64 ~/Documents/week2/day3  
    $ cd github_page/                                                                                                                     
-   student@M70213 MINGW64 ~/Documents/week2/day3/github_page                           $ ls                                                                                css/  gulpfile.js  img/  index.html  js/  LICENSE  package.json  package-lock.json  README.md  scss/  vendor/  
+   student@M70213 MINGW64 ~/Documents/week2/day3/github_page 
+   $ ls 
+   css/  gulpfile.js  img/  index.html  js/  LICENSE  package.json  package-lock.json  README.md  scss/  vendor/  
    ```
 
 5. github로 접속해서 New repository를 만든다.
@@ -32,14 +34,22 @@
 7. 새로 만든 repository에 압축을 푼 파일들을 전부 업로드
 
    ```
-   student@M70213 MINGW64 ~/Documents/week2/day3/github_page                         
-   $ git init                                                                         Initialized empty Git repository in C:/Users/student/Documents/week2/day3/github_page/.git/   
+   student@M70213 MINGW64 ~/Documents/week2/day3/github_page
+   $ git init 
+   Initialized empty Git repository in 
+   C:/Users/student/Documents/week2/day3/github_page/.git/ 
    
-   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git add .                                                                                                                           `
-   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git commit -m "first commit"              
+   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)
+   $ git add .
    
-   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git remote add origin https://github.com/wnsgur9648/wnsgur9648.github.io.git                                                        
-   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git push -u origin master
+   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)
+   $ git commit -m "first commit" 
+   
+   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master) 
+   $ git remote add origin https://github.com/wnsgur9648/wnsgur9648.github.io.git  
+   
+   student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)   
+   $ git push -u origin master
    ```
 
 > github에서 settings -> github pages로 간다. (자신의 도메인을 설정할 수도 있다.)
@@ -55,9 +65,27 @@
 10. 수정한 부분을 재업로드 하기
 
     ```
-    student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git add .                                                                         warning: LF will be replaced by CRLF in index.html.                                 The file will have its original line endings in your working directory                                                                
-    student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git commit -m "my profile"                                                       [master 1fed2bd] my profile                                                         1 file changed, 17 insertions(+), 102 deletions(-)                                                                                   
-    student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)                 $ git push                                                                         Enumerating objects: 5, done.                                                        Counting objects: 100% (5/5), done.                                                 Delta compression using up to 12 threads                                           Compressing objects: 100% (3/3), done.                                             Writing objects: 100% (3/3), 765 bytes | 765.00 KiB/s, done.                       Total 3 (delta 2), reused 0 (delta 0)                                               remote: Resolving deltas: 100% (2/2), completed with 2 local objects.               To https://github.com/wnsgur9648/wnsgur9648.github.io.git                           59773ff..1fed2bd  master -> master        
+    student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)
+    $ git add .              
+    warning: LF will be replaced by CRLF in index.html.
+    The file will have its original line endings in your working directory 
+    
+    student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master) 
+    $ git commit -m "my profile"    
+    [master 1fed2bd] my profile 
+    1 file changed, 17 insertions(+), 102 deletions(-)
+    
+    student@M70213 MINGW64 ~/Documents/week2/day3/github_page (master)
+    $ git push    
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.  
+    Delta compression using up to 12 threads 
+    Compressing objects: 100% (3/3), done. 
+    Writing objects: 100% (3/3), 765 bytes | 765.00 KiB/s, done. 
+    Total 3 (delta 2), reused 0 (delta 0)  
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To https://github.com/wnsgur9648/wnsgur9648.github.io.git
+    59773ff..1fed2bd  master -> master  
     ```
 
 
