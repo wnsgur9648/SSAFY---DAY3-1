@@ -75,7 +75,7 @@
 - pyenv 설치
 
 ```
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 ```
 
 
@@ -435,6 +435,7 @@ city = {
     "광주": [0, -2, 10],
     "부산": [2, -2, 9],
 }
+
 # 답변 코드는 아래에 작성해주세요.
 ondo=0
 for c in city.keys():
@@ -443,27 +444,45 @@ for c in city.keys():
     ondo/=len(city[c])
     print("{} : {:.1f}".format(c, ondo))
     ondo=0
-        
+
 # 답변 코드는 아래에 작성해주세요.
-result={}
-ondo=0
-for c in city.keys():
+first=True
+max_tem=tem
+max_city=c
+min_tem=tem
+min_city=c
+ 
+for c in city:
     for tem in city[c]:
-        ondo+=tem
-    ondo/=len(city[c])
-    result[c]=round(ondo,2)
-    ondo=0
-result=sorted(result.items(), key=operator.itemgetter(1))
+        if first :
+            max_tem=tem
+            max_city=c
+            min_tem=tem
+            min_city=c
+            first=False
 
-print("가장 추웠던 곳 : {}".format(result[0]))
-print("가장 더웠던 곳 : {}".format(result[len(result)-1]))
+        else:
+            if max_tem < tem:
+                max_tem=tem
+                max_city=c
 
+            if min_tem > tem:
+                min_tem=tem
+                min_city=c 
+
+print("가장 추웠던 곳 : {}, {}도".format(min_city, min_tem))
+print("가장 더웠던 곳 : {}, {}도".format(max_city, max_tem))
+          
 # 4. 위에서 서울은 영상 2도였던 적이 있나요?
 # 답변 코드는 아래에 작성해주세요.
+# 1. cities 변수에서 서울부분만 추출해서 seoul변수에 저장한다.
+# 1-1. flag 라고 하는 변수에 false 저장한다.
+# 2. seoul 변수(list)를 순회하며 요소가 2와 같았던 적이 있는지 확인한다.
+# 3. 2도 같았던 적이 있다면 flag 변수를 true로 바꿔준다.
+# 4.flag변수에 따라 출력문을 작성한다.
 if 2 in city["서울"]:
     print("서울은 영상 2도였던 적이 있습니다.")
 else:
     print("서울은 영상 2도였던 적이 없습니다.")
-
 ```
 
